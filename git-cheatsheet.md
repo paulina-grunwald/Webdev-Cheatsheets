@@ -1,6 +1,9 @@
 git hash-object --stdin
 
 
+
+__File status lifecycle__ - movement of the files bewteen stages in the git. Files can be in 4 various stages: ``untracked``, ``tracked``, ``modified``, ``staged``.
+
 We have following __git objects__:
 - Blobs,
 - Trees,
@@ -9,14 +12,20 @@ We have following __git objects__:
 
 Every object in Git has its own SHA1.
 
+``pwd`` -  present working directory<br/>
+
+Flags:
+
+
 ``-a`` - hidden<br/>
+``-l`` - view details of the file<br/>
 ``-t`` - type<br/>
 ``-p`` - pretty print<br/>
 ``ls`` -  print all files in the folder<br/>
 
 
-``git branch`` - check the list of branches
-``git init`` - Initialize empty git repository in selected folder<br/>
+``git branch`` - check the list of branches<br/>
+``git init`` - Initialize empty git<br/> repository in selected folder<br/>
 ``git status`` - check status<br/>
 ``git add`` - add files to staging area<br/>
 ``git commit -m "First commit"`` - commit the file with the commit message<br/>
@@ -48,3 +57,4 @@ git log --graph --oneline
 
 # REFERENCES
 - https://app.pluralsight.com/library/courses/how-git-works/table-of-contents
+- https://www.safaribooksonline.com/library/view/essential-git-/200000006A0403/
