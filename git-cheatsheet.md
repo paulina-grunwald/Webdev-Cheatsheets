@@ -1,9 +1,12 @@
 # Git Cheat Sheet
+
 > by Paulina Grunwald
 
-__VCS/VCM__ - (version control system/source code manager) tracks changes in your project and allows you to revert files back to the state before certain change has been done. You can revert the entire project to the previous state. It allows you to see previously done changes, who modified the code and when it was done/
+<br/>
 
-__Commit__ - snapshots of your project at the time when commit was done
+__VCS/VCM__ - (version control system/source code manager) tracks changes in your project and allows you to revert files back to the state before certain change has been done. You can revert the entire project to the previous state. It allows you to see previously done changes, who modified the code and when it was done.
+
+__Commit__ - snapshots of your project at the time when commit was done.
 
 __Repository__ - directory that contains all files from your project(as well as certain hidden files). They are used to communicate with Git. t. Repositories
 can exist either locally on your computer or as a remote copy on another compute
@@ -40,7 +43,10 @@ Flag is used to alter how a program functions
 
 ``git branch`` - check the list of branches<br/>
 
-### Create new repo
+## Clone Existing repository
+``git clone https://github.com/libgit2/libgit2``
+
+## Create new repo
 
 ``git init`` - Initialize empty git<br/> repository in selected folder<br/>
 ``ls .git`` - check the content of the repo<br/>
@@ -75,10 +81,13 @@ or if you want to see already-added changes
 git diff --cached myfile.txt
 ``
 
-git log --graph --oneline
+git log --graph --oneline<br/>
 
-### Navigation through the log
-``git log`` -Show commit logs
+<br/>
+
+## Navgiation though the commit history
+
+``git log`` - Show commit logs<br/>
 
 To scroll down through the log, press:
 - ``j`` or ``↓``<br/>
@@ -89,19 +98,21 @@ To scroll down through the log, press:
 - ``b`` to move by a whole page screen<br/>
 - ``q`` to quit out of the log<br/>
 
+``git log -p <file>`` - Show changes over time for specific file<br/>
+``git blame <file>`` - Show who changed the code and when it was done<br/>
 
-Find commit using commit message:
-git log --all --grep='commit message sample'
- ``git log --oneline`` - displays short SHA and the commit message
-``git log -2`` - show commits form last two days
-
-``git log --since="2 days ago"``
-
-``git log --before="2017-03-01"``
-``git log --after="2017-03-01"``
-``git log --author="Paulina"``
+``git log --all --grep='commit message sample'`` - Find commit using commit message<br/>
+ ``git log --oneline`` - displays short SHA and the commit message<br/>
+``git log -2`` - show commits form last two days<br/>
+``git log --since="2 days ago"``<br/>
+``git log --before="2017-03-01"``<br/>
+``git log --after="2017-03-01"``<br/>
+``git log --author="Paulina"``<br/>
 
 ``git log --stat`` - shows which lists of the files that were changes as well as the number of added/removed lines
+
+# Check difference between Commits
+
 
 
 ### Git Checkout
@@ -109,6 +120,9 @@ git log --all --grep='commit message sample'
 
 ``git rm filename`` - remove filename
 
+
+``git remove``
+``git mv``
 
 # REFERENCES
 - https://app.pluralsight.com/library/courses/how-git-works/table-of-contents
