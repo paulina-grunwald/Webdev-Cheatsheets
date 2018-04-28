@@ -1,9 +1,16 @@
 # Git Cheat Sheet
 > by Paulina Grunwald
 
-__VCS/VCM__ - version control systsem/source code manager
+__VCS/VCM__ - (version control system/source code manager) tracks changes in your project and allows you to revert files back to the state before certain change has been done. You can revert the entire project to the previous state. It allows you to see previously done changes, who modified the code and when it was done/
 
-__File status lifecycle__ - movement of the files bewteen stages in the git. Files can be in 4 various stages: ``untracked``, ``tracked``, ``modified``, ``staged``.
+__Commit__ - snapshots of your project at the time when commit was done
+
+__Repository__ - directory that contains all files from your project(as well as certain hidden files). They are used to communicate with Git. t. Repositories
+can exist either locally on your computer or as a remote copy on another compute
+
+__File status life cycle__ - movement of the files bewteen stages in the git. Files can be in 4 various stages: ``untracked``, ``tracked``, ``modified``, ``staged``.
+
+__Staging Area__
 
 __SHA__ - ID number for each commit. Each SHA is unique
 
@@ -33,6 +40,7 @@ Flag is used to alter how a program functions
 
 ``git branch`` - check the list of branches<br/>
 
+### Create new repo
 
 ``git init`` - Initialize empty git<br/> repository in selected folder<br/>
 ``ls .git`` - check the content of the repo<br/>
@@ -73,20 +81,35 @@ git log --graph --oneline
 ``git log`` -Show commit logs
 
 To scroll down through the log, press:
-- ``j`` or ``↓``
-- ``d`` to move by half the page screen
-- ``f`` to move by a whole page screen to scroll up, press
-- ``k`` or ``↑`` to move up one line at a time
- u to move by half the page screen
-- ``b`` to move by a whole page screen
-- ``q`` to quit out of the log
+- ``j`` or ``↓``<br/>
+- ``d`` to move by half the page screen<br/>
+- ``f`` to move by a whole page screen to scroll up<br/>
+- ``k`` or ``↑`` to move up one line at a time<br/>
+ u to move by half the page screen<br/>
+- ``b`` to move by a whole page screen<br/>
+- ``q`` to quit out of the log<br/>
 
 
 Find commit using commit message:
 git log --all --grep='commit message sample'
  ``git log --oneline`` - displays short SHA and the commit message
+``git log -2`` - show commits form last two days
+
+``git log --since="2 days ago"``
+
+``git log --before="2017-03-01"``
+``git log --after="2017-03-01"``
+``git log --author="Paulina"``
 
 ``git log --stat`` - shows which lists of the files that were changes as well as the number of added/removed lines
+
+
+### Git Checkout
+``git-checkout`` - Switch branches or restore working tree files
+
+``git rm filename`` - remove filename
+
+
 # REFERENCES
 - https://app.pluralsight.com/library/courses/how-git-works/table-of-contents
 - https://www.safaribooksonline.com/library/view/essential-git-/200000006A0403/
