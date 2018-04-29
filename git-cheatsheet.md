@@ -85,6 +85,10 @@ git log --graph --oneline<br/>
 
 <br/>
 
+
+``git commit <filenae>``
+``git commit --ammend`` - change last commit
+
 ## Navgiation though the commit history
 
 ``git log`` - Show commit logs<br/>
@@ -102,6 +106,8 @@ To scroll down through the log, press:
 ``git blame <file>`` - Show who changed the code and when it was done<br/>
 
 ``git log --all --grep='commit message sample'`` - Find commit using commit message<br/>
+
+
  ``git log --oneline`` - displays short SHA and the commit message<br/>
 ``git log -2`` - show commits form last two days<br/>
 ``git log --since="2 days ago"``<br/>
@@ -111,9 +117,12 @@ To scroll down through the log, press:
 
 ``git log --stat`` - shows which lists of the files that were changes as well as the number of added/removed lines
 
+
+
 # Check difference between Commits
-
-
+``git diff`` - see changes that have been done between commits or branches
+``git diff --staged`` -
+``git diff b48gabb..fc92rkr``
 
 ### Git Checkout
 ``git-checkout`` - Switch branches or restore working tree files
@@ -123,6 +132,8 @@ To scroll down through the log, press:
 
 ``git remove``
 ``git mv``
+
+# Rebase
 
 # REFERENCES
 - https://app.pluralsight.com/library/courses/how-git-works/table-of-contents
