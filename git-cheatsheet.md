@@ -1,21 +1,40 @@
 # Git Cheat Sheet
 
-> by Paulina Grunwald
+> Written by Paulina Grunwald
 
+> <em>May 2018</em>
 <br/>
 
-__VCS/VCM__ - (version control system/source code manager) tracks changes in your project and allows you to revert files back to the state before certain change has been done. You can revert the entire project to the previous state. It allows you to see previously done changes, who modified the code and when it was done.
+# 1. About Git
+- Created by Linus Torvalds in April 2005.
+- Git 1.0 was released at the end of 2005.
+- Git is a distributed version control systems.
+- Every Git directory on every computer is a full-fledged repository with complete history and full version tracking abilities, independent of network access or a central server.
+- Every Git repository is full copy of the repository.
 
-__Commit__ - snapshots of your project at the time when commit was done.
+# 2. Useful terminology
+
+__VCS/VCM__ - (version control system/source code manager) tracks changes in your project and allows you to revert files back to the state before certain change has been done. You can revert the entire project to the previous state. It allows you to see previously done changes, who modified the code and when it was done.
 
 __Repository__ - directory that contains all files from your project(as well as certain hidden files). They are used to communicate with Git. t. Repositories
 can exist either locally on your computer or as a remote copy on another compute
 
+__Bare repository__ - repository without a working directory. Use bare repository on a remote server to allow multiple contributors to push their work. Think of bare repository as workspace.
+down vote. Bare repositories are only changed by transporting changes from other repositories.
+
+__Working directory__ - the area where user can modify the files in the repository before commiting them.
+
+__Commit__ - snapshots of your repository at the time when commit was done. It records metadata for each change made to the repository.
+
+__Remote__ - a link to another git repository.
+
 __File status life cycle__ - movement of the files bewteen stages in the git. Files can be in 4 various stages: ``untracked``, ``tracked``, ``modified``, ``staged``.
+
+__Index__ - describes the repository directory strucure and content at the point in time
 
 __Staging Area__
 
-__SHA__ - ID number for each commit. Each SHA is unique
+__SHA__ - ID number for each commit. Each SHA is unique. Every object in Git has its own SHA1.
 
 __Branch__
 
@@ -25,7 +44,12 @@ We have following __git objects__:
 - Commits
 - Annotated Tags.
 
-Every object in Git has its own SHA1.
+
+
+Git has three main states:
+- modified,
+- staged,
+- commited.
 
 ``pwd`` -  present working directory<br/>
 ``mkdir your_folder_name`` -  create new folder
@@ -35,6 +59,7 @@ Every object in Git has its own SHA1.
 Flag is used to alter how a program functions
 
 ``-a`` - hidden<br/>
+``ls -l`` - shows total numbers of files in the folder
 ``-l`` - view details of the file<br/>
 ``-t`` - type<br/>
 ``-p`` - pretty print<br/>
@@ -135,9 +160,14 @@ To scroll down through the log, press:
 
 # Rebase
 
+
+
 # REFERENCES
+- https://en.wikipedia.org/wiki/Git
 - https://app.pluralsight.com/library/courses/how-git-works/table-of-contents
 - https://www.safaribooksonline.com/library/view/essential-git-/200000006A0403/
 - https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Checking-the-Status-of-Your-Files
-- https://git-scm.com/docs/git-status
 - https://www.atlassian.com/git/tutorials/inspecting-a-repository
+- https://www.safaribooksonline.com/library/view/complete-git-and/9781789137293/
+- https://git-scm.com/book/en/v2
+- https://blog.osteele.com/2008/05/my-git-workflow/
