@@ -16,8 +16,7 @@
 
 __VCS/VCM__ - (version control system/source code manager) tracks changes in your project and allows you to revert files back to the state before certain change has been done. You can revert the entire project to the previous state. It allows you to see previously done changes, who modified the code and when it was done.
 
-__Repository__ - directory that contains all files from your project(as well as certain hidden files). They are used to communicate with Git. t. Repositories
-can exist either locally on your computer or as a remote copy on another compute
+__Repository__ - directory that contains all files from your project(as well as certain hidden files). They are used to communicate with Git. t. Repositories can exist either locally on your computer or as a remote copy on another compute. Every repository has it's <em>master</em>.
 
 __Bare repository__ - repository without a working directory. Use bare repository on a remote server to allow multiple contributors to push their work. Think of bare repository as workspace.
 down vote. Bare repositories are only changed by transporting changes from other repositories.
@@ -36,7 +35,8 @@ __Staging Area__
 
 __SHA__ - ID number for each commit. Each SHA is unique. Every object in Git has its own SHA1.
 
-__Branch__
+__Branch__ - allow collaboration between members of the team, enable easy "rollback" of unwanted changes. Do not work in master branch with exception of your own repositories. Changes that you commit in a Git branch are not visible in other branches unless you merge your changes to it.
+
 
 We have following __git objects__:
 - Blobs,
@@ -50,6 +50,12 @@ Git has three main states:
 - modified,
 - staged,
 - commited.
+
+
+git add -A && git commit -m "Your Message"
+
+``git remote`` - display, add, remove git remotes
+``git remote -v`` -
 
 ``pwd`` -  present working directory<br/>
 ``mkdir your_folder_name`` -  create new folder
@@ -72,6 +78,7 @@ Flag is used to alter how a program functions
 ``git clone https://github.com/libgit2/libgit2``
 
 ## Create new repo
+
 
 ``git init`` - Initialize empty git<br/> repository in selected folder<br/>
 ``ls .git`` - check the content of the repo<br/>
@@ -113,6 +120,9 @@ git log --graph --oneline<br/>
 
 ``git commit <filenae>``
 ``git commit --ammend`` - change last commit
+
+## Importance of commit messages
+
 
 ## Navgiation though the commit history
 
