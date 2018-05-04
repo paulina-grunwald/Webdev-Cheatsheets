@@ -6,11 +6,11 @@
 <br/>
 
 # 1. About Git
-- Created by Linus Torvalds in April 2005.
+- Created by Linus Torvalds (creator of the Linux operating system kernel) in April 2005.
 - Git 1.0 was released at the end of 2005.
 - Git is a distributed version control systems.
 - Every Git directory on every computer is a full-fledged repository with complete history and full version tracking abilities, independent of network access or a central server.
-- Every Git repository is full copy of the repository.
+- Every Git repository is full copy of the repository. It creates place for full version control history of your code. 
 
 # 2. Useful terminology
 
@@ -25,15 +25,15 @@ __Working directory__ - the area where user can modify the files in the reposito
 
 __Commit__ - snapshots of your repository at the time when commit was done. It records metadata for each change made to the repository.
 
-__Remote__ - a link to another git repository.
+__Remote__ - a link to another git repository. As long as a changeset is in the staging area, git allows you to edit it as you like (e.g replace staged files with other versions of staged files).
 
 __File status life cycle__ - movement of the files bewteen stages in the git. Files can be in 4 various stages: ``untracked``, ``tracked``, ``modified``, ``staged``.
 
 __Index__ - describes the repository directory strucure and content at the point in time
 
-__Staging Area__
+__Staging Area__ -  describes step before the commit is made. 
 
-__SHA__ - ID number for each commit. Each SHA is unique. Every object in Git has its own SHA1.
+__SHA__ - ID number (hash value) for each commit. Each SHA is unique. Every object in Git has its own SHA1. All items  are stored in git databse by using the SHA.
 
 __Branch__ - allow collaboration between members of the team, enable easy "rollback" of unwanted changes. Do not work in master branch with exception of your own repositories. Changes that you commit in a Git branch are not visible in other branches unless you merge your changes to it.
 
@@ -47,9 +47,9 @@ We have following __git objects__:
 
 
 Git has three main states:
-- modified,
-- staged,
-- commited.
+- modified (it means that you have changed something in the file_
+- staged (you mark the current file and its version to be added to your database at the next performed commit),
+- commited (data is safely saved and stored in your local database).
 
 
 git add -A && git commit -m "Your Message"
