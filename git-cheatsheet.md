@@ -88,7 +88,10 @@ Flag is used to alter how a program functions
 ``git config user.email "name@gmail.com"`` - add e-mail info<br/>
 
 ``git add`` - add files to staging area<br/>
+``git add '*.txt'`` - You also can use wildcards if you want to add many files of the same type
+
 ``git commit -m "First commit"`` - commit the file with the commit message<br/>
+``git commit -m "Title" -m "Description ..........";`` - commit file with title and commit message
 ``git log`` - check the list of existing commits<br/>
 
 ``git count-objects`` - count objects in the git repo<br/>
